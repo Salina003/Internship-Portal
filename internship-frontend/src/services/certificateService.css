@@ -1,0 +1,118 @@
+/* ===========================
+   CERTIFICATE LIST CONTAINER
+=========================== */
+
+.certificate-list {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ===========================
+   CERTIFICATE ITEM
+=========================== */
+
+.certificate-item {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.307);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  animation: slideFadeIn 0.5s ease forwards;
+}
+
+.certificate-item:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.677);
+}
+
+.certificate-item strong {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.certificate-item small {
+  color: #555;
+}
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.certificate-item button {
+  padding: 8px 16px;
+  background: #eef0f3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.certificate-item button:hover {
+  background: #084298;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Add click animation */
+.certificate-item button:active {
+  transform: scale(0.95);
+}
+
+/* ===========================
+   LOADING / ERROR / EMPTY STATES
+=========================== */
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 40px;
+  animation: pulse 1.4s infinite;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes slideFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 600px) {
+  .certificate-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .certificate-item button {
+    margin-top: 12px;
+    width: 100%;
+  }
+}

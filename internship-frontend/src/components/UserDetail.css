@@ -1,0 +1,116 @@
+/* === USER DETAIL CARD === */
+.user-detail {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px rgba(58, 29, 81, 0.12);
+  font-family: "Inter", sans-serif;
+  animation: fadeSlideIn 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Heading */
+.user-detail h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #20222b;
+}
+
+/* Info Section */
+.user-info {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Optional badges (e.g., role) */
+.user-info p span {
+  font-weight: 600;
+  color: #3f4fd1;
+}
+
+/* === ACTION BUTTONS === */
+.user-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.user-actions a,
+.user-actions button {
+  text-decoration: none;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* Edit Button */
+.btn-edit {
+  background: linear-gradient(135deg, #6c63ff, #9b52a0);
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(108, 39, 148, 0.25);
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(108, 39, 148, 0.35);
+}
+
+/* Delete Button */
+.btn-delete {
+  background: linear-gradient(135deg, #dc3545, #a71d2a);
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(220, 53, 69, 0.25);
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(220, 53, 69, 0.35);
+}
+
+/* Back Button */
+.btn-back {
+  background: linear-gradient(135deg, #6c757d, #565e64);
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(108, 117, 125, 0.25);
+}
+
+.btn-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(108, 117, 125, 0.35);
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .user-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .user-actions a,
+  .user-actions button {
+    width: 100%;
+  }
+}

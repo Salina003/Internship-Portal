@@ -1,0 +1,109 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f8f9ff;
+  color: #1a1a1a;
+}
+
+/* MAIN LAYOUT */
+.app-container {
+  display: flex;
+  width: 100%;
+}
+
+/* SIDEBAR NAV */
+.navbar {
+  width: 230px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0b1162b0, #583fb1);
+  padding: 28px 20px;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.08);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* LOGO AT TOP */
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* LINKS COLUMN */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LINK STYLE */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+/* ON HOVER */
+.nav-links a:hover {
+  background: rgba(255,255,255,0.16);
+  transform: translateX(3px);
+}
+
+/* ACTIVE TAB */
+.active-link {
+  background: rgba(255,255,255,0.32);
+  backdrop-filter: blur(4px);
+  font-weight: 600;
+}
+
+/* MAIN CONTENT RIGHT SIDE */
+.main-content {
+  margin-left: 230px;
+  padding: 26px 32px;
+  width: calc(100% - 230px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    width: 200px;
+    position: absolute;
+    left: -200px;
+    transition: left 0.3s ease;
+  }
+
+  .navbar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 500;
+  }
+
+  .hamburger .bar {
+    width: 24px;
+    height: 3px;
+    background:white;
+    margin: 4px 0;
+  }
+}

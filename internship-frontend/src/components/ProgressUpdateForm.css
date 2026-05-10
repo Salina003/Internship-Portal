@@ -1,0 +1,91 @@
+.progress-form {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+  animation: fadeSlide 0.6s ease;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.progress-form h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.progress-form input,
+.progress-form select,
+.progress-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.progress-form input:focus,
+.progress-form select:focus,
+.progress-form textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99,102,241,0.2);
+}
+
+/* Preview bar */
+.progress-preview {
+  margin-top: 10px;
+}
+
+.preview-bar-bg {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.preview-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  transition: width 0.3s ease;
+}
+
+/* Submit */
+.form-actions {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.form-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: rgb(54, 54, 192);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-actions button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(185, 183, 209, 0.671);
+}
+
+.form-actions button:active {
+  transform: scale(0.95);
+}

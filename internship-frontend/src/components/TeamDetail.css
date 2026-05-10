@@ -1,0 +1,140 @@
+/* === PAGE CONTAINER === */
+.team-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  font-family: "Inter", sans-serif;
+  animation: fadeSlideIn 0.6s ease;
+}
+
+/* TITLE */
+.team-detail h3 {
+  font-size: 2rem;
+  color: #20222b;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* DESCRIPTION */
+.team-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* INFO GRID */
+.team-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* INFO CARD */
+.team-card {
+  background: #f8f9ff;
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  color: #20222b;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(108, 99, 255, 0.18);
+}
+
+/* USER BADGES */
+.team-users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.user-badge {
+  background: #eef2ff;
+  color: #3f4fd1;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ACTION BUTTONS */
+.team-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.team-actions a,
+.team-actions button {
+  text-decoration: none;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* EDIT BUTTON */
+.btn-edit {
+  background: linear-gradient(135deg, #6c63ff, #9b52a0);
+  color: #fff;
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(108, 99, 255, 0.3);
+}
+
+/* DELETE BUTTON */
+.btn-delete {
+  background: linear-gradient(135deg, #ff4d4f, #c70039);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(199, 0, 57, 0.3);
+}
+
+/* BACK BUTTON */
+.btn-back {
+  background: #6c757d;
+  color: #fff;
+}
+
+.btn-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .team-info {
+    grid-template-columns: 1fr;
+  }
+
+  .team-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,148 @@
+.pd-container {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(6, 0, 0, 0.445);
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: "Inter", sans-serif;
+  animation: fadeUp 0.35s ease;
+}
+
+/* HEADER */
+.pd-header {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.pd-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1d1f2c;
+  margin: 0;
+}
+
+.pd-subtitle {
+  font-size: 0.95rem;
+  color: #676b78;
+  margin-top: 6px;
+}
+
+/* DESCRIPTION */
+.pd-description {
+  color: #44495a;
+  font-size: 1rem;
+  line-height: 1.52;
+  margin: 12px 0 26px;
+}
+
+/* GRID */
+.pd-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.pd-card {
+  padding: 16px 18px;
+  border: 1px solid #e6e8f0;
+  border-radius: 10px;
+  background: #f9fafc;
+}
+
+.pd-card.full {
+  grid-column: span 2;
+}
+
+/* LABEL + VALUE */
+.pd-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #70748a;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.pd-value {
+  font-size: 1rem;
+  color: #171a26;
+  font-weight: 500;
+}
+
+/* ACTIONS */
+.pd-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.pd-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.22s ease;
+}
+
+/* BUTTON VARIANTS */
+.pd-btn.edit {
+  background: #3b45e0;
+  color: white;
+}
+
+.pd-btn.edit:hover {
+  background: #2d37c8;
+}
+
+.pd-btn.delete {
+  background: #e03e49;
+  color: white;
+}
+
+.pd-btn.delete:hover {
+  background: #c5313b;
+}
+
+.pd-btn.back {
+  background: #eceef5;
+  color: #333a4d;
+}
+
+.pd-btn.back:hover {
+  background: #d8dcea;
+}
+
+/* LOADING */
+.pd-loading {
+  text-align: center;
+  padding: 40px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .pd-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .pd-card.full {
+    grid-column: span 1;
+  }
+}
